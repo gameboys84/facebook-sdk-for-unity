@@ -185,11 +185,16 @@ case "$TARGET_VERSION" in
         UNITY_NETWORKING_DIR="NONE"
     ;;
     2018)
-        UNITY_MANAGED_DIR="/Applications/Unity/hub/Editor/$FULL_VERSION/Unity.app/Contents/Managed/"
-        UNITY_UI_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/GUISystem/"
-        UNITY_ENGINE_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/Managed/UnityEngine/"
-        UNITY_EXTENSIONS_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/"
-        UNITY_NETWORKING_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/Networking/"
+        # UNITY_MANAGED_DIR="/Applications/Unity/hub/Editor/$FULL_VERSION/Unity.app/Contents/Managed/"
+        # UNITY_UI_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/GUISystem/"
+        # UNITY_ENGINE_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/Managed/UnityEngine/"
+        # UNITY_EXTENSIONS_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/"
+        # UNITY_NETWORKING_DIR="/Applications/Unity/Hub/Editor/$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/Networking/"
+        UNITY_MANAGED_DIR="/Applications/Unity$FULL_VERSION/Unity.app/Contents/Managed/"
+        UNITY_UI_DIR="/Applications/Unity$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/GUISystem/"
+        UNITY_ENGINE_DIR="/Applications/Unity$FULL_VERSION/Unity.app/Contents/Managed/UnityEngine/"
+        UNITY_EXTENSIONS_DIR="/Applications/Unity$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/"
+        UNITY_NETWORKING_DIR="/Applications/Unity$FULL_VERSION/Unity.app/Contents/UnityExtensions/Unity/Networking/"
     ;;
     2019)
         #fix find template version
