@@ -97,10 +97,12 @@ downloadUnityJarResolverFromGithub() {
 
   pushd "$PROJECT_ROOT" > /dev/null || exit 1
   info "Downloading unity-jar-resolver..."
-  curl -L "$UNITY_JAR_RESOLVER_ZIP_URL" > $UNITY_JAR_RESOLVER_NAME.zip || die "Failed to download $UNITY_JAR_RESOLVER_URL"
+  info "skip download unity-jar-resolver.zip"
+  # curl -L "$UNITY_JAR_RESOLVER_ZIP_URL" > $UNITY_JAR_RESOLVER_NAME.zip || die "Failed to download $UNITY_JAR_RESOLVER_URL"
   unzip -o -j -q $UNITY_JAR_RESOLVER_NAME.zip -d $UNITY_JAR_RESOLVER_NAME
   mv $UNITY_JAR_RESOLVER_NAME/$UNITY_JAR_RESOLVER_PACKAGE_NAME-$UNITY_JAR_RESOLVER_VERSION.unitypackage "$PROJECT_ROOT"/$UNITY_JAR_RESOLVER_PACKAGE
-  rm -rf $UNITY_JAR_RESOLVER_NAME.zip $UNITY_JAR_RESOLVER_NAME
+  # rm -rf $UNITY_JAR_RESOLVER_NAME.zip $UNITY_JAR_RESOLVER_NAME
+  rm -rf $UNITY_JAR_RESOLVER_NAME
   info "Importing unity-jar-resolver to UnitySDK project..."
 
   UNITY_PACKAGE_PATH="$PROJECT_ROOT/$UNITY_JAR_RESOLVER_PACKAGE"
